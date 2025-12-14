@@ -1,0 +1,28 @@
+[
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "welcome",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def welcome():\n    return {\n            \"message\": \"Hello World\"\n            }",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "app = FastAPI()\n@app.get(\"/welcome\")\ndef welcome():\n    return {\n            \"message\": \"Hello World\"\n            }",
+        "detail": "src.main",
+        "documentation": {}
+    }
+]
