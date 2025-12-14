@@ -1,5 +1,13 @@
 [
     {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -8,12 +16,62 @@
         "documentation": {}
     },
     {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "base_router",
+        "importPath": "routes.base",
+        "description": "routes.base",
+        "isExtraImport": true,
+        "detail": "routes.base",
+        "documentation": {}
+    },
+    {
         "label": "welcome",
         "kind": 2,
-        "importPath": "src.main",
-        "description": "src.main",
-        "peekOfCode": "def welcome():\n    return {\n            \"message\": \"Hello World\"\n            }",
-        "detail": "src.main",
+        "importPath": "src.routes.base",
+        "description": "src.routes.base",
+        "peekOfCode": "def welcome():\n    app_name = os.getenv('APP_NAME')\n    app_version = os.getenv('APP_VERSION')\n    return {\n            \"app_name\": app_name,\n            \"app_version\": app_version\n            }",
+        "detail": "src.routes.base",
+        "documentation": {}
+    },
+    {
+        "label": "base_router",
+        "kind": 5,
+        "importPath": "src.routes.base",
+        "description": "src.routes.base",
+        "peekOfCode": "base_router = APIRouter(\n    prefix = \"/api/v1\",\n    tags =[\"api_v1\"]\n)\n@base_router.get(\"/\")\ndef welcome():\n    app_name = os.getenv('APP_NAME')\n    app_version = os.getenv('APP_VERSION')\n    return {\n            \"app_name\": app_name,",
+        "detail": "src.routes.base",
         "documentation": {}
     },
     {
@@ -21,7 +79,7 @@
         "kind": 5,
         "importPath": "src.main",
         "description": "src.main",
-        "peekOfCode": "app = FastAPI()\n@app.get(\"/welcome\")\ndef welcome():\n    return {\n            \"message\": \"Hello World\"\n            }",
+        "peekOfCode": "app = FastAPI()\napp.include_router(base_router)",
         "detail": "src.main",
         "documentation": {}
     }
