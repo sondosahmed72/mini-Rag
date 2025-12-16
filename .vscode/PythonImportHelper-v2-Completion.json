@@ -1,5 +1,77 @@
 [
     {
+        "label": "get_settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -16,11 +88,99 @@
         "documentation": {}
     },
     {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
         "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "ResponseSignal",
+        "importPath": "src.models.enums.ResponseEnms",
+        "description": "src.models.enums.ResponseEnms",
+        "isExtraImport": true,
+        "detail": "src.models.enums.ResponseEnms",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsConfigDict",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
         "documentation": {}
     },
     {
@@ -49,11 +209,98 @@
         "documentation": {}
     },
     {
-        "label": "base_router",
-        "importPath": "routes.base",
-        "description": "routes.base",
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
         "isExtraImport": true,
-        "detail": "routes.base",
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "DataController",
+        "importPath": "src.controllers",
+        "description": "src.controllers",
+        "isExtraImport": true,
+        "detail": "src.controllers",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "importPath": "src.routes",
+        "description": "src.routes",
+        "isExtraImport": true,
+        "detail": "src.routes",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "importPath": "src.routes",
+        "description": "src.routes",
+        "isExtraImport": true,
+        "detail": "src.routes",
+        "documentation": {}
+    },
+    {
+        "label": "BaseController",
+        "kind": 6,
+        "importPath": "src.controllers.BaseController",
+        "description": "src.controllers.BaseController",
+        "peekOfCode": "class BaseController:\n   def __init__(self):\n        self.app_settings = get_settings()",
+        "detail": "src.controllers.BaseController",
+        "documentation": {}
+    },
+    {
+        "label": "DataController",
+        "kind": 6,
+        "importPath": "src.controllers.DataController",
+        "description": "src.controllers.DataController",
+        "peekOfCode": "class DataController(BaseController):\n    def __init__(self):\n        super().__init__()\n        self.size_scale = 1048576\n    def validate_uploaded_file(self, file: UploadFile):\n        if file.content_type not in self.app_settings.FILE_ALLOWED_TYPES:\n            return False, ResponseSignal.FILE_TYPE_NOT_SUPPORTED.value\n        if file.size > self.app_settings.FILE_MAX_SIZE * self.size_scale:\n            return False, ResponseSignal.FILE_SIZE_EXCEEDED.value\n        return True, ResponseSignal.FILE_VALIDATED_SUCCESS.value",
+        "detail": "src.controllers.DataController",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "peekOfCode": "class Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env\n        env_file_encoding=\"utf-8\"\n    )",
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "get_settings",
+        "kind": 2,
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "peekOfCode": "def get_settings():\n    return Settings()",
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "SRC_DIR",
+        "kind": 5,
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "peekOfCode": "SRC_DIR = Path(__file__).resolve().parent.parent  # Points to 'src' directory\nENV_FILE = SRC_DIR / \".env\"\nclass Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env",
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "ENV_FILE",
+        "kind": 5,
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "peekOfCode": "ENV_FILE = SRC_DIR / \".env\"\nclass Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env\n        env_file_encoding=\"utf-8\"",
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "ResponseSignal",
+        "kind": 6,
+        "importPath": "src.models.enums.ResponseEnms",
+        "description": "src.models.enums.ResponseEnms",
+        "peekOfCode": "class ResponseSignal(Enum):\n    FILE_TYPE_NOT_SUPPORTED = \"file_type_not_support\"\n    FILE_SIZE_EXCEEDED = \"file_size_exceeded\"\n    FILE_UPLOAD_SUCCESS =\"file_uploaded_success\"\n    FILE_UPLOAD_FAILED =\"file_uploaded_failed\"\n    FILE_VALIDATED_SUCCESS = \"file_validate_successfully\"",
+        "detail": "src.models.enums.ResponseEnms",
         "documentation": {}
     },
     {
@@ -61,7 +308,7 @@
         "kind": 2,
         "importPath": "src.routes.base",
         "description": "src.routes.base",
-        "peekOfCode": "def welcome():\n    app_name = os.getenv('APP_NAME')\n    app_version = os.getenv('APP_VERSION')\n    return {\n            \"app_name\": app_name,\n            \"app_version\": app_version\n            }",
+        "peekOfCode": "def welcome(app_setting: Settings=Depends(get_settings)):\n    app_settings = get_settings()\n    app_name = app_settings.APP_NAME\n    app_version = app_settings.APP_VERSION\n    app_version = os.getenv('APP_VERSION')\n    return {\n            \"app_name\": app_name,\n            \"app_version\": app_version\n            }",
         "detail": "src.routes.base",
         "documentation": {}
     },
@@ -70,8 +317,17 @@
         "kind": 5,
         "importPath": "src.routes.base",
         "description": "src.routes.base",
-        "peekOfCode": "base_router = APIRouter(\n    prefix = \"/api/v1\",\n    tags =[\"api_v1\"]\n)\n@base_router.get(\"/\")\ndef welcome():\n    app_name = os.getenv('APP_NAME')\n    app_version = os.getenv('APP_VERSION')\n    return {\n            \"app_name\": app_name,",
+        "peekOfCode": "base_router = APIRouter(\n    prefix = \"/api/v1\",\n    tags =[\"api_v1\"]   \n)\n@base_router.get(\"/\")\ndef welcome(app_setting: Settings=Depends(get_settings)):\n    app_settings = get_settings()\n    app_name = app_settings.APP_NAME\n    app_version = app_settings.APP_VERSION\n    app_version = os.getenv('APP_VERSION')",
         "detail": "src.routes.base",
+        "documentation": {}
+    },
+    {
+        "label": "data_router",
+        "kind": 5,
+        "importPath": "src.routes.data",
+        "description": "src.routes.data",
+        "peekOfCode": "data_router = APIRouter(\n    prefix = \"/api/v1/data\",\n    tags =[\"api_v1\",\"data\"]   \n)\n@data_router.post(\"/upload/{project_id}\")\nasync def upload_data(project_id: str,file : UploadFile,\n                      app_settings: Settings = Depends(get_settings)):\n    # validate the file properties\n    is_valid, result_signal = DataController().validate_uploaded_file(file=file)\n    if not is_valid:",
+        "detail": "src.routes.data",
         "documentation": {}
     },
     {
@@ -79,7 +335,7 @@
         "kind": 5,
         "importPath": "src.main",
         "description": "src.main",
-        "peekOfCode": "app = FastAPI()\napp.include_router(base_router)",
+        "peekOfCode": "app = FastAPI()\napp.include_router(base.base_router)\napp.include_router(data.data_router)",
         "detail": "src.main",
         "documentation": {}
     }
