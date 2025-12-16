@@ -64,6 +64,48 @@
         "documentation": {}
     },
     {
+        "label": "get_settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "importPath": "src.helpers.config",
+        "description": "src.helpers.config",
+        "isExtraImport": true,
+        "detail": "src.helpers.config",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "string",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "string",
+        "description": "string",
+        "detail": "string",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "UploadFile",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -144,6 +186,31 @@
         "documentation": {}
     },
     {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
+        "documentation": {}
+    },
+    {
+        "label": "ResponseSignal",
+        "importPath": "src.models.enums.ResponseEnms",
+        "description": "src.models.enums.ResponseEnms",
+        "isExtraImport": true,
+        "detail": "src.models.enums.ResponseEnms",
+        "documentation": {}
+    },
+    {
+        "label": "ResponseSignal",
+        "importPath": "src.models.enums.ResponseEnms",
+        "description": "src.models.enums.ResponseEnms",
+        "isExtraImport": true,
+        "detail": "src.models.enums.ResponseEnms",
+        "documentation": {}
+    },
+    {
         "label": "ResponseSignal",
         "importPath": "src.models.enums.ResponseEnms",
         "description": "src.models.enums.ResponseEnms",
@@ -200,15 +267,6 @@
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
-        "documentation": {}
-    },
-    {
         "label": "JSONResponse",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -222,6 +280,32 @@
         "description": "src.controllers",
         "isExtraImport": true,
         "detail": "src.controllers",
+        "documentation": {}
+    },
+    {
+        "label": "ProjectController",
+        "importPath": "src.controllers",
+        "description": "src.controllers",
+        "isExtraImport": true,
+        "detail": "src.controllers",
+        "documentation": {}
+    },
+    {
+        "label": "aiofiles",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiofiles",
+        "description": "aiofiles",
+        "detail": "aiofiles",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
         "documentation": {}
     },
     {
@@ -245,7 +329,7 @@
         "kind": 6,
         "importPath": "src.controllers.BaseController",
         "description": "src.controllers.BaseController",
-        "peekOfCode": "class BaseController:\n   def __init__(self):\n        self.app_settings = get_settings()",
+        "peekOfCode": "class BaseController:\n   def __init__(self):\n        self.app_settings = get_settings()\n        self.base_dir = os.path.dirname(os.path.dirname(__file__))\n        self.file_dir = os.path.join(\n           self.base_dir,\n           \"assets/files\"\n        )\n   def generate_random_string(self, length: int=12):\n      return ''.join(random.choice(string.ascii_lowercase+string.digits,k = length))",
         "detail": "src.controllers.BaseController",
         "documentation": {}
     },
@@ -259,11 +343,20 @@
         "documentation": {}
     },
     {
+        "label": "ProjectController",
+        "kind": 6,
+        "importPath": "src.controllers.ProjectController",
+        "description": "src.controllers.ProjectController",
+        "peekOfCode": "class ProjectController(BaseController):\n    def __init__(self):\n        super().__init__()\n    def get_project_path(self, project_id: str):\n        project_dir = os.path.join(\n            self.files_dir,\n            project_id\n        )\n        if not os.path.exists(project_dir):\n            os.makedirs(project_dir)",
+        "detail": "src.controllers.ProjectController",
+        "documentation": {}
+    },
+    {
         "label": "Settings",
         "kind": 6,
         "importPath": "src.helpers.config",
         "description": "src.helpers.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env\n        env_file_encoding=\"utf-8\"\n    )",
+        "peekOfCode": "class Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    FILE_DEFAULT_CHUNK_SIZE: int\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env\n        env_file_encoding=\"utf-8\"",
         "detail": "src.helpers.config",
         "documentation": {}
     },
@@ -281,7 +374,7 @@
         "kind": 5,
         "importPath": "src.helpers.config",
         "description": "src.helpers.config",
-        "peekOfCode": "SRC_DIR = Path(__file__).resolve().parent.parent  # Points to 'src' directory\nENV_FILE = SRC_DIR / \".env\"\nclass Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env",
+        "peekOfCode": "SRC_DIR = Path(__file__).resolve().parent.parent  # Points to 'src' directory\nENV_FILE = SRC_DIR / \".env\"\nclass Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    FILE_DEFAULT_CHUNK_SIZE: int\n    model_config = SettingsConfigDict(",
         "detail": "src.helpers.config",
         "documentation": {}
     },
@@ -290,7 +383,7 @@
         "kind": 5,
         "importPath": "src.helpers.config",
         "description": "src.helpers.config",
-        "peekOfCode": "ENV_FILE = SRC_DIR / \".env\"\nclass Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env\n        env_file_encoding=\"utf-8\"",
+        "peekOfCode": "ENV_FILE = SRC_DIR / \".env\"\nclass Settings(BaseSettings):\n    APP_NAME : str\n    APP_VERSION: str \n    # OPENAI_API_KEY :str\n    FILE_MAX_SIZE: int\n    FILE_ALLOWED_TYPES : list\n    FILE_DEFAULT_CHUNK_SIZE: int\n    model_config = SettingsConfigDict(\n        env_file=str(ENV_FILE),  # ← Explicit path to src/.env",
         "detail": "src.helpers.config",
         "documentation": {}
     },
@@ -322,11 +415,20 @@
         "documentation": {}
     },
     {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "src.routes.data",
+        "description": "src.routes.data",
+        "peekOfCode": "logger = logging.getLogger('uvicorn.error')\ndata_router = APIRouter(\n    prefix = \"/api/v1/data\",\n    tags =[\"api_v1\",\"data\"]   \n)\n@data_router.post(\"/upload/{project_id}\")\nasync def upload_data(project_id: str,file : UploadFile,\n                      app_settings: Settings = Depends(get_settings)):\n    # validate the file properties\n    data_controller = DataController()",
+        "detail": "src.routes.data",
+        "documentation": {}
+    },
+    {
         "label": "data_router",
         "kind": 5,
         "importPath": "src.routes.data",
         "description": "src.routes.data",
-        "peekOfCode": "data_router = APIRouter(\n    prefix = \"/api/v1/data\",\n    tags =[\"api_v1\",\"data\"]   \n)\n@data_router.post(\"/upload/{project_id}\")\nasync def upload_data(project_id: str,file : UploadFile,\n                      app_settings: Settings = Depends(get_settings)):\n    # validate the file properties\n    is_valid, result_signal = DataController().validate_uploaded_file(file=file)\n    if not is_valid:",
+        "peekOfCode": "data_router = APIRouter(\n    prefix = \"/api/v1/data\",\n    tags =[\"api_v1\",\"data\"]   \n)\n@data_router.post(\"/upload/{project_id}\")\nasync def upload_data(project_id: str,file : UploadFile,\n                      app_settings: Settings = Depends(get_settings)):\n    # validate the file properties\n    data_controller = DataController()\n    is_valid, result_signal = data_controller.validate_uploaded_file(file=file)",
         "detail": "src.routes.data",
         "documentation": {}
     },
